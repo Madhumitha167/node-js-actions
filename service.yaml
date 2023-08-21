@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs
+  name: newwebpage-service
 spec:
   selector:
-    app: nodejs
+    app: newwebpage
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
-  type: NodePort
+      targetPort: 80
+  type: LoadBalancer
